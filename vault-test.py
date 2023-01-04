@@ -1,3 +1,4 @@
+"""Example DAG demonstrating the usage of the Hashicorp Vault."""
 import logging 
 from datetime import datetime  
 from airflow import DAG 
