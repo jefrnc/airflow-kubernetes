@@ -8,7 +8,6 @@ from airflow.hooks.base_hook import BaseHook
 from airflow.operators.python_operator import PythonOperator
 
 def get_variable(**kwargs):
-    conn = BaseHook.get_connection(kwargs['my_conn_id'])
     my_var = Variable.get(kwargs['var_name']) 
     logging.info(f'var_name value: {my_var}')
 
