@@ -7,7 +7,7 @@ from airflow.hooks.base_hook import BaseHook
 from airflow.operators.python_operator import PythonOperator
 
 
-def test_connection(**kwargs):
+def get_test_connection(**kwargs):
     # Test connections   
     conn = BaseHook.get_connection(kwargs['my_conn_id'])
     logging.info(     
@@ -26,7 +26,7 @@ with DAG(
 ) as dag:      
     test_task = PythonOperator(         
         task_id='test_connection',         
-        python_callable=test_connection,         
+        python_callable=get_test_connection,         
         op_kwargs={
             'my_conn_id': 'connection_to_test'
         },     
