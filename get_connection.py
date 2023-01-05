@@ -15,8 +15,7 @@ def get_test_connection(**kwargs):
         f'Login: {conn.login}'     
         f'Password: {conn.password}'     
         f'URI: {conn.get_uri()}'     
-        f'Host: {conn.host}'     
-        f'Extra: " {json.loads(conn.get_extra())}'   
+        f'Host: {conn.host}'
         # ... 
     )
 
