@@ -1,6 +1,7 @@
 """Get connections"""
 import json 
-import logging  
+import logging 
+from datetime import datetime 
 from airflow import DAG 
 from airflow.models import Variable 
 from airflow.hooks.base_hook import BaseHook 
