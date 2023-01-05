@@ -26,6 +26,6 @@ with DAG(
         python_callable=get_secrets,         
         op_kwargs={
             'my_conn_id': 'connection_to_test',
-            'var_name': 'develop/secrets/federate-dev/devops/global/global/jenkins_eks_dev20_service/jenkins_eks_dev20_password',
+            'var_name': 'my_var',
         },     
     )
